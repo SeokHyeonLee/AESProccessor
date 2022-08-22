@@ -59,8 +59,6 @@ module AESProcessor(DONE,
     
     
     always @(posedge CLK or negedge nRST) begin
-        DONE    <= 1'b0;
-        TEXTOUT <= 128'b0;
         if (~nRST) begin
             //ENC 초기화
             ENCPROCESS   <= 1'b0;
