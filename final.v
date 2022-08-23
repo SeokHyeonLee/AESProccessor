@@ -83,6 +83,8 @@ module AESProcessor(DONE,
             TEXTOUT <= 128'b0;
         end
         else begin
+            DONE <= 1'b0;
+            TEXTOUT <= 128'b0;
             if (START && ~ENCDEC) begin
                 //암호화 시작
                 ENCPROCESS <= 1'b1;
